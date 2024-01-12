@@ -1,0 +1,26 @@
+.fa-edit, .fa-trash{
+  transition-duration: .1s;
+  margin:0px 5px;
+}
+
+.fa-edit:hover{
+  color: rgb(125,237,98);
+}
+
+.fa-trash:hover{
+  color: rgb(255, 0, 0);
+}
+
+/* #edit-song-modal-button-img{
+  height: 30px;
+  width: 30px;
+}
+
+#delete-song-modal-img{
+  height: 30px;
+  width: 30px;
+} */
+
+.song-buttons{
+  margin-left: 5px;
+}

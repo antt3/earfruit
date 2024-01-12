@@ -1,0 +1,252 @@
+.playlist-header {
+	position: relative;
+	background-image: linear-gradient(
+
+		rgb(29, 185, 84, 0.1) 65%,
+		#12121200
+	);
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: 60% 40%;
+	grid-template-areas:
+		"image name"
+		"image description";
+}
+
+.playlist-name-owner {
+	padding: 0;
+	margin: 0;
+	font-size: 5rem;
+	cursor: pointer;
+	transition: all .2s ease-in;
+}
+.playlist-name-not-owner {
+    padding: 0;
+	margin: 0;
+	font-size: 5rem;
+}
+.playlist-name-owner:hover {
+	color: rgb(29, 185, 84);
+}
+
+.playlist-name-cont {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+	grid-area: name;
+    padding: 10px 30px;
+	/* border: 1px solid white; */
+}
+
+.playlist-description-cont {
+    display: flex;
+    align-items: center;
+	grid-area: description;
+    padding: 10px 30px;
+}
+.playlist-description-cont ul {
+    margin: 0;
+    padding: 0;
+}
+.playlist-description {
+    display: flex;
+    align-items: center;
+
+}
+.playlist-description-owner {
+	color: #b3b3b3;
+	font-weight: 200;
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: all 0.06s ease-in;
+}
+.playlist-description-owner:hover {
+	color: #1eb553;
+    transform: scale(1.1);
+}
+
+.playlist-description-not-owner{
+	color: #b3b3b3;
+	font-weight: 200;
+	font-size: 1.1rem;
+}
+.playlist-username {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+.playlist-username h3 {
+    margin: 0;
+}
+.playlist-image {
+	grid-area: image;
+	position: relative;
+}
+
+.playlist-image img {
+	width: 100%;
+}
+.edit-image-btn {
+	position: absolute;
+	/* right:20px; */
+	padding: 10px;
+	margin: 0;
+	bottom: 15px;
+	right: 15px;
+	border-radius: 50%;
+	border: none;
+	background-color: rgb(29, 185, 84);
+	cursor: pointer;
+}
+.edit-image-btn:hover {
+	color: white;
+}
+.delete-playlist-btn {
+	position: absolute;
+	top: 30px;
+	right: 150px;
+    /* border-radius: 1rem;
+    border: none;
+    font-size: 1rem; */
+    /* background-color: transparent; */
+    color: #b3b3b3;
+    cursor: pointer;
+}
+
+.delete-playlist-btn:hover {
+    color: red;
+    /* background-color: black; */
+    transform: scale(1.04);
+}
+.editNameInput{
+    font-size: 5rem;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    border: none;
+    width: 70%;
+
+}
+
+.editNameInput:focus {
+	outline: none; /* Removes the border when the input is clicked */
+}
+.playlist-description-input{
+	font-size: 1.1rem;
+	font-weight: 200;
+	background-color: transparent;
+	color: white;
+	border: none;
+	width: 70%;
+}
+
+.playlist-description-input:focus {
+	outline: none;
+}
+.playlist-description-input::placeholder {
+	color: #b3b3b3a3;
+}
+.edit-image-input {
+	border: 1px;
+	background-color: rgb(207, 207, 207);
+	margin: 0;
+	padding: 0;
+	flex-grow: 2;
+	border-top-left-radius: 150px;
+	border-bottom-left-radius: 150px;
+	padding-left: 10px;
+}
+
+.edit-image-div {
+	/* border: 2px white solid; */
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 150px;
+}
+
+.playlist-description-cont button,
+.update-name-btn,
+.cancel-name-btn {
+	border-radius: 15px;
+	padding: 5px;
+	border: 0;
+	font-size: 1rem;
+	font-family: Helvetica, sans-serif;
+	cursor: pointer;
+	transition: all .1s ease-in;
+}
+
+.playlist-description-cont button:hover,
+.update-name-btn:hover,
+.cancel-name-btn:hover {
+	background-color: rgb(29, 185, 84);
+	color: white;
+}
+.edit-image-cancel-btn {
+	background-color: rgb(207,207,207);
+	border-top-right-radius: 150px;
+	border-bottom-right-radius: 150px;
+	border: 0px;
+}
+
+.edit-image-update-btn {
+	background-color: rgb(207,207,207);
+	border: 0px;
+	border-right: 1px solid black;
+	cursor: pointer;
+}
+.edit-image-update-btn:hover,
+.edit-image-cancel-btn:hover{
+	background-color: rgb(29, 185, 84);
+	color: white;
+}
+
+.playlist-cont {
+	position: relative;
+}
+
+.close-playlist-search-btn {
+	color: black;
+	cursor: pointer;
+}
+
+.close-playlist-search-btn:hover {
+	color: rgb(29, 185, 84)
+}
+
+.playlist-description-edit-btn,
+.update-name-btn {
+	margin-right: 10px;
+}
+
+.playlist-search-song {
+	position: relative;
+}
+.playlist-add-song-btn {
+	position:fixed;
+	right: 20px;
+	bottom: 100px;
+	cursor: pointer;
+	opacity: 0.6;
+	border-radius: 50%;
+	padding: 5px;
+	color: #1eb553;
+	background-color: white;
+}
+.playlist-add-song-btn:hover {
+	color: white;
+	background-color: rgb(29, 185, 84);
+	opacity: 1;
+}
+
+.playlist-song-list {
+	padding: 32px 32px;
+	padding-right: 64px;
+}
+
+#playlist-playall-button{
+	margin-top: 30px;
+	;
+}

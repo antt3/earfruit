@@ -1,0 +1,203 @@
+.search-container {
+	padding: 32px 32px;
+}
+
+.playlists-container {
+	display: flex;
+	gap: 16px;
+	overflow-x: scroll;
+}
+::-webkit-scrollbar {
+	height: 12px;
+}
+.playlist-card {
+	min-height: 242px;
+	min-width: 164px;
+	height: 25vh;
+	width: 19vh;
+	background-color: #181818;
+	font-family: Helvetica, sans-serif;
+	border-radius: 3%;
+	padding: 10px 10px;
+	cursor: pointer;
+	transition: all 0.15s ease-in;
+}
+.playlist-card:hover {
+	background-color: hsla(0, 0%, 100%, 0.1);
+}
+.playlist-card-contents {
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+}
+#playlist-name {
+	color: white;
+	margin-top: 1rem;
+	margin-bottom: 0;
+	font-size: 16px;
+	font-weight: 550;
+	width: 90%;
+}
+.playlist-card-contents > p {
+	color: rgb(168, 167, 167);
+	font-size: 14px;
+	width: 90%;
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+.playlist-card-contents > img {
+	width: 90%;
+	height: 60%;
+	border-radius: 3%;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: black;
+}
+
+#search {
+	background-color: rgb(197, 196, 196);
+	height: 40px;
+	padding-left: 25px;
+	margin-right: 15px;
+	width: 30vw;
+	border: none;
+	font-size: 16px;
+	border-radius: 500px;
+}
+
+#search:focus {
+	outline: none;
+}
+
+search-icon {
+	margin-right: 10px;
+}
+.search-bar {
+	background-color: rgb(197, 196, 196);
+	padding: 10px 20px;
+	border-radius: 500px;
+	width: fit-content;
+}
+
+.search-bar button {
+	background-color: rgb(202, 201, 201);
+	border-radius: 500px;
+	border: none;
+	font-size: 20px;
+	padding: 7px 11px;
+	height: 40px;
+	font-weight: 500;
+	cursor: pointer;
+	color: rgb(0, 0, 0, 0.8);
+	transition: all 0.1s ease-in;
+}
+.search-bar button:hover {
+	transform: scale(1.1);
+	background-color: rgba(176, 176, 176, 0.798);
+}
+::placeholder {
+	color: rgb(0, 0, 0, 0.55);
+	opacity: 1;
+}
+
+.search-icon {
+	color: black;
+}
+
+.song-card {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px solid white;
+}
+
+.song-card-contents {
+	display: flex;
+	gap: 10px;
+}
+
+.song-card-buttons {
+	display: flex;
+	align-items: center;
+}
+
+.song-card-queue-button {
+	height: 30px;
+	width: 30px;
+	background-color: #4a4a4a;
+	border-radius: 50%;
+	transition-duration: 0.1s;
+}
+
+.search-song-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.search-song-number {
+	width: 100px;
+	/* border: 2px white solid; */
+}
+
+tbody > tr {
+	/* color:blue; */
+	margin: 2px;
+	/* border: 2px white solid; */
+}
+.search-song-button {
+	cursor: pointer;
+}
+.search-song-button:hover {
+	color: #1db954;
+}
+tbody > tr:hover {
+	background-color: hsla(0, 0%, 100%, 0.13);
+}
+tbody > tr:hover .search-song-album,
+tbody > tr:hover .search-song-artist {
+	color: white;
+}
+
+.search-song-album,
+.search-song-artist {
+	color: #b3b3b3;
+	font-size: 0.9rem;
+	font-weight: 400;
+}
+
+.search-song-name {
+	font-size: 1.1rem;
+	margin-bottom: 5px;
+}
+
+.search-song-button-cont {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 2px;
+	justify-content: end;
+	padding-right: 15px;
+}
+
+thead th {
+	border-bottom: rgb(179, 179, 179, 1%) solid 1px;
+	padding-bottom: 5px;
+	text-align: left;
+	color: #b3b3b3;
+	height: 16px;
+	box-shadow: 0px 1px #b3b3b3;
+}
+
+.search-song-row td {
+	height: 60px;
+}
+
+.search-song-number {
+	padding-left: 15px;
+	height: 40px;
+}

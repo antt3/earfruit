@@ -1,0 +1,136 @@
+.song_form_div {
+    display: flex;
+    justify-content: center;
+}
+
+
+.song_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+}
+
+
+.song_form_errors {
+    margin-top: 4vh;
+    margin-bottom: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e91429;
+    width: 400px;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+
+.song_form_error {
+    font-size: 18px;
+    margin-bottom: 1vh;
+}
+
+
+.song_form_divs {
+    margin-top: 1vh;
+    margin-bottom: .5vh;
+}
+
+
+.song_form_p {
+    max-width: 500px;
+    min-height: fit-content;
+    font-size: 18px;
+    color: rgb(125,237,98)
+
+}
+
+
+
+.sf_label {
+    font-size: 17px;
+    margin-bottom: 2px;
+    margin-left: 5px;
+}
+
+
+.sf_option {
+    color: #444444;
+}
+
+
+.song_form_divs > input,
+.song_form_divs > select {
+    padding-left: 9px;
+}
+
+
+.song_form_divs > input,
+.song_form_divs > select,
+.song_form_divs > button {
+    width: 350px;
+    height: 36px;
+    font-size: 18px;
+    border-radius: 9px;
+}
+
+
+.song_form_divs > input:hover,
+.song_form_divs > select:hover {
+    box-shadow: inset 0 0 0 1px rgb(125,237,98)
+    ;
+}
+
+
+.song_form_divs > input:focus,
+.song_form_divs > select:focus {
+    box-shadow: inset 0 0 0 1px black;
+}
+
+
+.song_form_divs > button {
+    text-decoration: none;
+    background-color: whitesmoke;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+    border: 0px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all .06s ease-in;
+    height: 36px;
+    width: 350px;
+}
+
+
+.sf_submit {
+    margin-top: 2vh;
+    text-decoration: none;
+    background-color: whitesmoke;
+    font-weight: bold;
+    color: black;
+    font-size: 23px;
+    border: 0px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: all .06s ease-in;
+    height: 50px;
+    width: 120px;
+    margin-bottom: 4vh;
+}
+
+
+.sf_submit:hover,
+.song_form_divs > button:hover {
+    background-color: rgb(125,237,98);
+    transform: scale(1.1);
+}
+
+
+.uploading_img {
+    max-height: 18px;
+    max-width: 18px;
+}

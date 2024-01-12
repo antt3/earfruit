@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.side-bar-container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    /* height: 100%; */
+    /* margin-bottom: 80px; */
+    /* border: 2px solid blue; */
+}
+.side-bar-playlist-list{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-bar-container h2 {
+    margin-bottom: 40px;
+    /* position: relative; */
+}
+.side-bar-links{
+    display: flex;
+    flex-direction: column;
+    height: 45%;
+}
+.sidebar-link {
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: rgb(168, 167, 167);
+    font-weight: 700;
+    font-size: 1.01rem;
+    margin-left: 10px;
+    transition: all 0.07s ease-in;
+    cursor: pointer;
+}
+
+.sidebar-link:hover {
+    color: white;
+    transform: scale(1.04);
+}
+.sidebar-link i{
+    margin-right: 15px;
+}
+
+#side-bar-circle-logo{
+    width: 40px;
+    top: 10px;
+    margin-bottom: 50px;
+}
+
+#side-bar-word-logo{
+    margin-top: 0;
+    margin-bottom: 50px;
+    margin-left: 5px;
+    color: rgb(125,237,98);
+    font-family: (Open+Sans);
+    font-size:x-large;
+    font-weight: bolder;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+#side-bar-logo-imgs{
+    margin-top: 15px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center
+}
+
+.side-bar-playlist-list {
+    padding: 0;
+    width: 85%;
+    padding-top: 20px;
+    border-top: 2px solid rgba(128, 128, 128, 0.289);
+    /* border: 2px white solid; */
+}
+
+.sidebar-playlist-link {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.about-cont {
+    /* border-top: 2px solid rgba(128, 128, 128, 0.289); */
+    padding-top: 20px;
+    /* border: 2px solid blue; */
+    /* position:sticky; */
+    bottom: 0;
+    left: 0;
+    width: 85%;
+    height: 250px;
+    margin:0;
+    padding-left: 10px;
+    z-index: 1;
+    border-top: 2px solid rgba(128, 128, 128, 0.289);
+
+}
+
+.about-div {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+
+}
+
+.about-header {
+    text-align: center;
+}
+
+.about-name {
+    margin-right: 10px;
+}
+
+.about-github {
+    margin-right: 10px;
+    color: white;
+}
+
+.about-linkedin {
+    color: white;
+}
+
+.about-linkedin:hover,
+.about-github:hover {
+    color: rgb(29, 185, 84);
+}
