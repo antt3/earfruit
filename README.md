@@ -1,5 +1,5 @@
 # EarFruit
-
+[Original Repo](https://github.com/mipresley23/EarFruitGroupProjectRepo)
 
 ## Index
 [Feature List Documentation](https://github.com/mipresley23/EarFruitGroupProjectRepo/wiki/MVP-Feature-List)
@@ -20,7 +20,7 @@
 
 ## Link to project Repo
 
-[EarFruit Repo](https://github.com/mipresley23/EarFruitGroupProjectRepo)
+[EarFruit Repo]([https://github.com/mipresley23/EarFruitGroupProjectRepo](https://earfruit-7457daedaf2d.herokuapp.com/))
 
 ## Technologies Used
 
@@ -32,7 +32,7 @@
 EarFruit is a Spotify clone, where users are allowed to browse songs by song title or have them grouped by artist or album title. Users who are signed up and logged in may add songs. They also may edit information about or delete songs that they've uploaded. Any users may listen to a song or any previously created playlist of songs, but users who are signed in may create their own playlists. The signed in user may also edit their own playlists. Signed in users may also include a picture upon signup that becomes their profile picture. Each user's profile includes information about the user, any playlists that user has created, as well as any songs that user has uploaded. 
 
 ## Getting Started
-> * Begin by cloning this [repo.](https://github.com/mipresley23/EarFruitGroupProjectRepo)
+> * Begin by cloning this [repo.](https://github.com/antt3/earfruit)
 > * Travel to the project root directory and install dependencies by running the following commands.
 > > * pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
 > * Create a .env file based on the example with your environment information
