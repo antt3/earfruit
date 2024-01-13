@@ -7,6 +7,14 @@ from flask_login import UserMixin
 db = SQLAlchemy()
 
 
+Playlist_Songs = db.Table(
+  'playlist_songs',
+  db.Model.metadata,
+  db.Column('songs', db.Integer, db.ForeignKey('songs.id'), primary_key=True),
+  db.Column('playlists', db.Integer, db.ForeignKey('playlists.id'), primary_key=True)
+)
+
+
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
 
@@ -38,12 +46,6 @@ class User(db.Model, UserMixin):
             'photo_url': self.photo_url
         }
 
-Playlist_Songs = db.Table(
-  'playlist_songs',
-  db.Model.metadata,
-  db.Column('songs', db.Integer, db.ForeignKey('songs.id'), primary_key=True),
-  db.Column('playlists', db.Integer, db.ForeignKey('playlists.id'), primary_key=True)
-)
 
 class Song(db.Model):
   __tablename__ = 'songs'
