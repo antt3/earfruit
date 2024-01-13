@@ -147,7 +147,7 @@ export default function SideBar() {
 						<i class="about-github fa-brands fa-github fa-xl"></i>
 					</a>
 					<a
-						href="https://www.linkedin.com/in/anthony-t3/"
+						href="https://www.linkedin.com/in/antt3/"
 						target="_blank"
 						className="about-linkedin"
 					>
