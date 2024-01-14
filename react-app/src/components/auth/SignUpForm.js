@@ -9,7 +9,7 @@ const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [photoUrl, setPhotoUrl] = useState('');
   const [password, setPassword] = useState('');
-  const [repeatPassword, setRepeatPassword] = useState('');
+  const [repeatEmail, setRepeatEmail] = useState('');
   const [firstSubmit, setFirstSubmit] = useState(false)
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
@@ -32,15 +32,15 @@ const SignUpForm = () => {
     if (photoUrl.length > 0 && !(validateImg(photoUrl))) errors.push('Image url must a url and to a png, jpg, or jpeg.')
     if (!password) errors.push('A password is required.');
     if (password.length < 6) errors.push('Password length must be at least 6 characters.')
-    if (!repeatPassword) errors.push('Please repeat the password.');
-    if (password !== repeatPassword) errors.push('Password and repeated password must match.');
+    if (!repeatEmail) errors.push('Please repeat the email.');
+    if (password !== repeatEmail) errors.push('Email and repeated email must match.');
     if(username.length > 40) errors.push('Username must be 40 characters or less.')
     if(email.length > 255) errors.push('Email length must be 255 characters or less.')
     if(password.length > 255) errors.push('Password length must be 255 characters or less.')
     if(photoUrl.length > 2000) errors.push('Photo url must be 2000 characters or less.')
 
     setErrors(errors);
-  }, [username, email, password, repeatPassword, photoUrl]);
+  }, [username, email, password, repeatEmail, photoUrl]);
 
   const onSignUp = async (e) => {
     e.preventDefault();
@@ -70,8 +70,8 @@ const SignUpForm = () => {
     setPassword(e.target.value);
   };
 
-  const updateRepeatPassword = (e) => {
-    setRepeatPassword(e.target.value);
+  const updateRepeatEmail = (e) => {
+    setRepeatEmail(e.target.value);
   };
 
   if (user) {
@@ -87,54 +87,54 @@ const SignUpForm = () => {
           ))}
         </div> }
         <div className='song_form_divs'>
-          <div className='sf_label'><label>Username</label></div>
-          <input
-            type='text'
-            name='username'
-            placeholder='Username'
-            onChange={updateUsername}
-            value={username}
-          ></input>
-        </div>
-        <div className='song_form_divs'>
-          <div className='sf_label'><label>Email</label></div>
+          <div className='sf_label'><label>What's your email?</label></div>
           <input
             type='text'
             name='email'
-            placeholder='Email'
+            placeholder='Enter your email.'
             onChange={updateEmail}
             value={email}
           ></input>
         </div>
         <div className='song_form_divs'>
-          <div className='sf_label'><label>Profile Picture Url</label></div>
+          <div className='sf_label'><label>Confirm your email</label></div>
           <input
             type='text'
-            name='photoUrl'
-            placeholder='(Optional) Profile Photo URL'
-            onChange={updatePhotoUrl}
-            value={photoUrl}
+            name='email'
+            placeholder='Enter your email again.'
+            onChange={updateRepeatEmail}
+            value={repeatEmail}
+            required={true}
           ></input>
         </div>
         <div className='song_form_divs'>
-          <div className='sf_label'><label>Password</label></div>
+          <div className='sf_label'><label>Create a Password</label></div>
           <input
             type='password'
             name='password'
-            placeholder='Password'
+            placeholder='Create a password.'
             onChange={updatePassword}
             value={password}
           ></input>
         </div>
         <div className='song_form_divs'>
-          <div className='sf_label'><label>Repeat Password</label></div>
+          <div className='sf_label'><label>What should we call you?</label></div>
           <input
-            type='password'
-            name='repeat_password'
-            placeholder='Repeated Password'
-            onChange={updateRepeatPassword}
-            value={repeatPassword}
-            required={true}
+            type='text'
+            name='username'
+            placeholder='Enter a profile name.'
+            onChange={updateUsername}
+            value={username}
+          ></input>
+        </div>
+        <div className='song_form_divs'>
+          <div className='sf_label'><label>What's your profile picture?</label></div>
+          <input
+            type='text'
+            name='photoUrl'
+            placeholder="(Optional) Enter your profile photo's URL."
+            onChange={updatePhotoUrl}
+            value={photoUrl}
           ></input>
         </div>
         <button type='submit' className='song_form_divs sf_submit'>Sign Up</button>
