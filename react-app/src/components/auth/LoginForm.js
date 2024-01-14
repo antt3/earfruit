@@ -15,7 +15,7 @@ const LoginForm = () => {
     if (err === 'Email is not found.') {
       return 'Email is incorrect.';
     } else if (err === 'Email is required.') {
-      return 'Email/Username is required.'
+      return 'Email is required.'
     } else {
       return err
     }
@@ -50,11 +50,11 @@ const LoginForm = () => {
           ))}
         </div> }
         <div className='song_form_divs'>
-          <div className='sf_label'><label htmlFor='email'>Email</label></div>
+          <div className='sf_label'><label htmlFor='email'>Email address</label></div>
           <input
             name='email'
             type='text'
-            placeholder='Email'
+            placeholder='Enter your email.'
             value={email}
             onChange={updateEmail}
           />
@@ -64,7 +64,7 @@ const LoginForm = () => {
           <input
             name='password'
             type='password'
-            placeholder='Password'
+            placeholder='Enter your password.'
             value={password}
             onChange={updatePassword}
           />
