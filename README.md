@@ -1,5 +1,5 @@
 # EarFruit
-[Original Repo](https://github.com/mipresley23/EarFruitGroupProjectRepo)
+
 
 ## Index
 [Feature List Documentation](https://github.com/mipresley23/EarFruitGroupProjectRepo/wiki/MVP-Feature-List)
@@ -16,11 +16,11 @@
 
 ## Live site hosted by Heroku
 
-[EarFruit](https://earfruit.herokuapp.com/)
+[EarFruit](https://earfruit-7457daedaf2d.herokuapp.com/)
 
-## Link to project Repo
+## Link to the original group project repo
 
-[EarFruit Repo]([https://github.com/mipresley23/EarFruitGroupProjectRepo](https://earfruit-7457daedaf2d.herokuapp.com/))
+[Original Repo](https://github.com/mipresley23/EarFruitGroupProjectRepo)
 
 ## Technologies Used
 
@@ -67,7 +67,7 @@ EarFruit is a Spotify clone, where users are allowed to browse songs by song tit
 
 ## Features
 ### Signup
-![image](https://user-images.githubusercontent.com/59783664/182046326-f6c99a35-4a43-4fdf-a6eb-9b755c58e03c.png)
+![IMG_0540](https://github.com/antt3/earfruit/assets/95051166/431ae413-f6e5-4158-8aa5-b0106756a5bf)
 
 ### Splash/Root Page showing Demo User
 ![image](https://user-images.githubusercontent.com/59783664/182046430-b0d20a47-9092-42dc-a3c2-7351b02877cc.png)
