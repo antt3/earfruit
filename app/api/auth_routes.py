@@ -90,27 +90,18 @@ def unauthorized():
 def upload_photo():
 
     if "photo" not in request.files:
-        # print('----------error #1-----------')
         return {"errors": "photo required"}, 400
 
     photo = request.files["photo"]
 
-    # print('--------photo--------', photo)
-
     if not is_photo(photo.filename):
-        # print('----------error #2-----------')
         return {"errors": "file type not permitted"}, 400
 
     photo.filename = get_unique_filename(photo.filename)
-
     upload = upload_file_to_s3(photo)
 
     if "url" not in upload:
-        # print('----------error #3-----------', upload, '--------')
         return upload, 400
 
-    # print('-------upload-Working-------', upload, '-----------------')
-
     url = upload["url"]
-
     return {"source": url}

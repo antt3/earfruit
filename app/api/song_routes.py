@@ -58,9 +58,7 @@ def delete_song(song_id):
 @song_routes.route('/<string:search_value>')
 # @login_required
 def search_song(search_value):
-    # print(search_value)
     song_search_results = Song.query.filter(Song.name.ilike(f'%{search_value}%')).all()
-    # print('---------------------------------',playlist_search_results,'---------------------------------')
     return {'songs': [song.to_dict() for song in song_search_results]}
 
 @song_routes.route('/<int:song_id>', methods=['PUT'])
@@ -93,14 +91,12 @@ def upload_mp3():
         return {"errors": "file type not permitted"}, 400
 
     mp3.filename = get_unique_filename(mp3.filename)
-
     upload = upload_file_to_s3(mp3)
 
     if "url" not in upload:
         return upload, 400
 
     url = upload["url"]
-
     return {"source": url}
 
 
@@ -109,5 +105,4 @@ def upload_mp3():
 def delete_mp3():
     source = request.form["source"]
     response = delete_object_from_bucket(source)
-    # print('------response-------', response)
     return response
