@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../store/session';
@@ -33,7 +33,6 @@ const SignUpForm = () => {
     if (!username) errors.push('A username is required.');
     if (!email) errors.push('An email is required.');
     if (!validateEmail(email)) errors.push('Must be a valid email address.');
-    if (photoUrl.length > 0 && !(validateImg(photoUrl))) errors.push('Image url must a url and to a png, jpg, or jpeg.');
     if (!password) errors.push('A password is required.');
     if (password.length < 6) errors.push('Password length must be at least 6 characters.');
     if (!repeatEmail) errors.push('Please repeat the email.');
@@ -44,7 +43,7 @@ const SignUpForm = () => {
     if (!isPhoto) errors.push('The file must be a png, jpg, or jpeg.');
     
     setErrors(errors);
-  }, [username, email, password, repeatEmail, photoUrl]);
+  }, [username, email, password, repeatEmail, photo, isPhoto]);
 
   const handleClick = e => {
     e.preventDefault();
@@ -99,10 +98,6 @@ const SignUpForm = () => {
   const updateEmail = (e) => {
     setEmail(e.target.value);
   };
-
-  const updatePhotoUrl = (e) => {
-    setPhotoUrl(e.target.value);
-  }
 
   const updatePassword = (e) => {
     setPassword(e.target.value);
