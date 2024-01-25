@@ -3,6 +3,7 @@ from app.models import User, db
 from app.forms import LoginForm
 from app.forms import SignUpForm
 from flask_login import current_user, login_user, logout_user
+from app.s3_funcs import upload_file_to_s3, is_photo, get_unique_filename, delete_object_from_bucket
 
 auth_routes = Blueprint('auth', __name__)
 
@@ -83,3 +84,33 @@ def unauthorized():
     Returns unauthorized JSON when flask-login authentication fails
     """
     return {'errors': ['Unauthorized']}, 401
+
+
+@auth_routes.route("/photo", methods=["POST"])
+def upload_photo():
+
+    if "photo" not in request.files:
+        # print('----------error #1-----------')
+        return {"errors": "photo required"}, 400
+
+    photo = request.files["photo"]
+
+    # print('--------photo--------', photo)
+
+    if not is_photo(photo.filename):
+        # print('----------error #2-----------')
+        return {"errors": "file type not permitted"}, 400
+
+    photo.filename = get_unique_filename(photo.filename)
+
+    upload = upload_file_to_s3(photo)
+
+    if "url" not in upload:
+        # print('----------error #3-----------', upload, '--------')
+        return upload, 400
+
+    # print('-------upload-Working-------', upload, '-----------------')
+
+    url = upload["url"]
+
+    return {"source": url}

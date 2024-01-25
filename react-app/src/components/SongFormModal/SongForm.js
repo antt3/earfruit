@@ -40,7 +40,7 @@ const SongForm = ({setShowModal}) => {
         if (albumImgUrl.length > 0 && !(validateImg(albumImgUrl))) errors.push('Image url must a url and to a png, jpg, or jpeg.');
         if (!genre) errors.push('The genre is required.');
         if (!mp3) errors.push('The song mp3 is required.');
-        if (!isMP3) errors.push('The file must be an mp3.')
+        if (!isMP3) errors.push('The file must be an mp3.');
 
         setErrors(errors);
     }, [name, album, genre, artist, mp3, albumImgUrl, isMP3]);
@@ -49,7 +49,7 @@ const SongForm = ({setShowModal}) => {
         e.preventDefault();
         setIsMP3(true);
         hiddenFileInput.current.click();
-      };
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
