@@ -7,7 +7,7 @@ import uuid
 BUCKET_NAME = os.environ.get("S3_BUCKET_NAME")
 
 S3_LOCATION = f"http://{BUCKET_NAME}.s3.amazonaws.com/"
-ALLOWED_EXTENSIONS = {"mp3"}
+ALLOWED_EXTENSIONS = [ "png", "jpg", "jpeg" ]
 
 
 s3 = boto3.client(
@@ -22,9 +22,14 @@ def is_mp3(filename):
     print(filename)
     print("." in filename)
     return "." in filename and \
+        filename.rsplit(".", 1)[1].lower() == "mp3"
+
+
+def is_photo(filename):
+    print(filename)
+    print("." in filename)
+    return "." in filename and \
         filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
-
-
 
 
 def get_unique_filename(filename):
