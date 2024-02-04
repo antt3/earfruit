@@ -110,14 +110,14 @@ export default function SideBar() {
 						target="_blank"
 						className="about-github"
 					>
-						<i class="about-github fa-brands fa-github fa-xl"></i>
+						<i className="about-github fa-brands fa-github fa-xl"></i>
 					</a>
 					<a
 						href="https://www.linkedin.com/in/jesse-njoroge/"
 						target="_blank"
 						className="about-linkedin"
 					>
-						<i class="fa-brands fa-linkedin fa-xl"></i>
+						<i className="fa-brands fa-linkedin fa-xl"></i>
 					</a>
 				</div>
 				<div className="about-div">
@@ -127,14 +127,14 @@ export default function SideBar() {
 						target="_blank"
 						className="about-github"
 					>
-						<i class="about-github fa-brands fa-github fa-xl"></i>
+						<i className="about-github fa-brands fa-github fa-xl"></i>
 					</a>
 					<a
 						href="https://www.linkedin.com/in/michael-presley-96729b235/"
 						target="_blank"
 						className="about-linkedin"
 					>
-						<i class="fa-brands fa-linkedin fa-xl"></i>
+						<i className="fa-brands fa-linkedin fa-xl"></i>
 					</a>
 				</div>
 				<div className="about-div">
@@ -144,14 +144,14 @@ export default function SideBar() {
 						target="_blank"
 						className="about-github"
 					>
-						<i class="about-github fa-brands fa-github fa-xl"></i>
+						<i className="about-github fa-brands fa-github fa-xl"></i>
 					</a>
 					<a
 						href="https://www.linkedin.com/in/antt3/"
 						target="_blank"
 						className="about-linkedin"
 					>
-						<i class="fa-brands fa-linkedin fa-xl"></i>
+						<i className="fa-brands fa-linkedin fa-xl"></i>
 					</a>
 				</div>
 				<div className="about-div">
@@ -161,14 +161,14 @@ export default function SideBar() {
 						target="_blank"
 						className="about-github"
 					>
-						<i class="about-github fa-brands fa-github fa-xl"></i>
+						<i className="about-github fa-brands fa-github fa-xl"></i>
 					</a>
 					<a
 						href="https://www.linkedin.com/in/krishna-mulloth-461ab9230/"
 						target="_blank"
 						className="about-linkedin"
 					>
-						<i class="fa-brands fa-linkedin fa-xl"></i>
+						<i className="fa-brands fa-linkedin fa-xl"></i>
 					</a>
 				</div>
 			</div>

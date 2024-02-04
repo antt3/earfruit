@@ -8,7 +8,6 @@ const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
-  const [photoUrl, setPhotoUrl] = useState('');
   const [photo, setPhoto] = useState(null);
   const [isPhoto, setIsPhoto] = useState(true);
   const [photoLoading, setPhotoLoading] = useState(false);
@@ -23,11 +22,6 @@ const SignUpForm = () => {
     return re.test(email);
   }
 
-  const validateImg = (url) => {
-    let re = /(http[s]*:\/\/)([a-z\-_0-9\/.]+)\.([a-z.]{2,3})\/([a-z0-9\-_\/._~:?#\[\]@!$&'()*+,;=%]*)([a-z0-9]+\.)(jpg|jpeg|png)/i;
-    return re.test(url);
-  }
-
   useEffect(() => {
     const errors = [];
     if (!username) errors.push('A username is required.');
@@ -36,7 +30,7 @@ const SignUpForm = () => {
     if (!password) errors.push('A password is required.');
     if (password.length < 6) errors.push('Password length must be at least 6 characters.');
     if (!repeatEmail) errors.push('Please repeat the email.');
-    if (password !== repeatEmail) errors.push('Email and repeated email must match.');
+    if (email !== repeatEmail) errors.push('Email and repeated email must match.');
     if (username.length > 40) errors.push('Username must be 40 characters or less.');
     if (email.length > 255) errors.push('Email length must be 255 characters or less.');
     if (password.length > 255) errors.push('Password length must be 255 characters or less.');
@@ -55,7 +49,7 @@ const SignUpForm = () => {
     e.preventDefault();
     setFirstSubmit(true);
 
-    if (!errors.length) {
+    if (!errors.length && photo) {
 
       const formData = new FormData();
       formData.append("photo", photo);
@@ -87,6 +81,21 @@ const SignUpForm = () => {
         setPhotoLoading(false);
         setIsPhoto(false);
 
+      }
+
+    } else if (!errors.length) {
+
+      const user = {
+        username,
+        email,
+        password,
+        photoUrl: 'https://ear-fruit-bucket.s3.us-west-1.amazonaws.com/no-pic.png'
+      };
+
+      const errors = await dispatch(signUp(user));
+      
+      if (errors) {
+        setErrors(errors)
       }
     }
   };

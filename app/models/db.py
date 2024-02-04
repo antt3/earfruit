@@ -22,29 +22,29 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(40), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
-    photo_url = db.Column(db.String(2000), nullable=True, default="https://as1.ftcdn.net/jpg/03/46/83/96/240_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg")
+    photo_url = db.Column(db.String(255), nullable=False)
 
     songs = db.relationship("Song", back_populates='user')
     playlists = db.relationship('Playlist', back_populates='user')
 
     @property
     def password(self):
-        return self.hashed_password
+      return self.hashed_password
 
     @password.setter
     def password(self, password):
-        self.hashed_password = generate_password_hash(password)
+      self.hashed_password = generate_password_hash(password)
 
     def check_password(self, password):
-        return check_password_hash(self.password, password)
+      return check_password_hash(self.password, password)
 
     def to_dict(self):
-        return {
-            'id': self.id,
-            'username': self.username,
-            'email': self.email,
-            'photo_url': self.photo_url
-        }
+      return {
+        'id': self.id,
+        'username': self.username,
+        'email': self.email,
+        'photo_url': self.photo_url
+      }
 
 
 class Song(db.Model):

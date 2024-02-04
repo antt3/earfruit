@@ -105,7 +105,10 @@ export const signUp = (username, email, password, photo_url) => async (dispatch)
     }),
   });
 
+  console.log('-------------response:', response, '-----------------');
+
   if (response.ok) {
+    console.log('-------------response is OK-----------------')
     const data = await response.json();
     dispatch(setUser(data))
     return null;
