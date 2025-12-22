@@ -16,7 +16,7 @@
 
 ## Live site hosted by Heroku
 
-[EarFruit](https://earfruit-7457daedaf2d.herokuapp.com/)
+This site is no longer live
 
 ## Link to the original group project repo
 
