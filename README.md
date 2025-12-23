@@ -1,5 +1,6 @@
 # EarFruit
 
+![earfruit-gif](https://github.com/user-attachments/assets/84ffd177-2d15-42c9-81bd-ee930f01279c)
 
 ## Index
 [Feature List Documentation](https://github.com/mipresley23/EarFruitGroupProjectRepo/wiki/MVP-Feature-List)
